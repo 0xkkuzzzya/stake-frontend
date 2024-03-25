@@ -4,6 +4,7 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 `
 
 const InfoText = styled.h3`
