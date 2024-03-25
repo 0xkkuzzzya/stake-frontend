@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import AtomLogo from '../../../../assets/svg/AtomLogo.webp'
 import ArrowWhite from '../../.././../assets/svg/ArrowWhite.svg'
+import { StakePageInput } from "./StakePageInput";
 
 const Field = styled.div`
     width: 100%;
@@ -33,39 +34,42 @@ const AvaibleBlock = styled.div`
     color: #CBCBCB;
     font-weight: 500;
     margin-bottom: 8px;
-    margin-left: 10px;
+    margin-left: 15px;
 `
 
 const MaxAmount = styled.div`
-    width: 25px;
-    height: 10px;
+    width: 30px;
+    height: 12px;
     border: 2px solid #3B9CFC;
     font-size: 8px;
     color: #3B9CFC;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    margin-right: 10px;
-    margin-bottom: 8px;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 7px;
+    cursor: pointer;
 `
 
 const TokenLogo = styled.img`
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     margin-left: 20px;
 `
 
 const TokenName = styled.a`
-    font-size: 25px;
+    font-size: 22px;
     color: white;
     font-weight: 500;
     margin-left: 10px;
 `
 
 const Arrow = styled.img`
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     margin-left: 5px;
+    margin-top: 2px;
 `
 
 
@@ -78,7 +82,7 @@ export const StakePageField = () => {
                     <TokenName>ATOM</TokenName>
                     <Arrow src={ArrowWhite} />
                 </div>
-                <StakePageField />
+                <StakePageInput/>
             </Field>
             <InpField>
                 <AvaibleBlock>Available: 0 ATOM</AvaibleBlock>
