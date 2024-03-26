@@ -12,6 +12,10 @@ const Button = styled.button`
     margin-top: 20px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+    transition: all .15s ease-in-out;
+    &:active {
+         transform: scale(0.95);
+    }
     @media (max-width: 500px) {
         font-size: 16px;   
     }

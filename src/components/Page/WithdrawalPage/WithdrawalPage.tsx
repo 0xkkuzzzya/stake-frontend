@@ -4,6 +4,7 @@ import { WithdrawalPageField } from "./WithdrawalPageFiels/WithdrawalPageField";
 import { WithdrawalPageInfo } from "./WithdrawalPageInfo";
 import { WithdrawalPageHeader } from "../../Header/WithdrawalPageHeader";
 import { WithdrawalPageConfirm } from "../../Buttons/PageButtons/WithdrawalPageConfirm";
+import { WithdrawalModalTransaction } from "../../Modal/PageModal/ModalTranzaction.tsx/WithdrawalModalTranzaction/WithdrawalModalTranzaction";
 
 const Container = styled.div`
     width: 450px;
@@ -11,7 +12,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     @media (max-width: 500px) {
-        width: 80%;
+        width: 85%;
     }
 `
 
@@ -21,7 +22,7 @@ export const WithdrawalPage = () => {
         <Container>
             <WithdrawalPageHeader/>
             <WithdrawalPageField/>
-            <WithdrawalPageConfirm/>
+            <WithdrawalModalTransaction/>
             <WithdrawalPageInfo/>
         </Container>
     )
