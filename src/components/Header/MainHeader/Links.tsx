@@ -95,7 +95,7 @@ export const DesLink = () => {
                 <MainHeaderLink to="/stake">Stake</MainHeaderLink>
             </LinkBlock>
             <LinkBlock>
-                <MainHeaderLink to="/withdrawals">Withdrawals</MainHeaderLink>
+                <MainHeaderLink to="/withdrawal">Withdrawals</MainHeaderLink>
             </LinkBlock>
             <LinkBlock>
                 <MainHeaderLink to="/claim">Claim</MainHeaderLink>
