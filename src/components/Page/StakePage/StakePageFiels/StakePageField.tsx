@@ -2,6 +2,7 @@ import styled from "styled-components";
 import AtomLogo from '../../../../assets/svg/AtomLogo.webp'
 import ArrowWhite from '../../.././../assets/svg/ArrowWhite.svg'
 import { StakePageInput } from "./StakePageInput";
+import { StakePageModal } from "../../../Modal/StakePageModal";
 
 const Field = styled.div`
     width: 100%;
@@ -52,36 +53,12 @@ const MaxAmount = styled.div`
     cursor: pointer;
 `
 
-const TokenLogo = styled.img`
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-`
-
-const TokenName = styled.a`
-    font-size: 22px;
-    color: white;
-    font-weight: 500;
-    margin-left: 10px;
-`
-
-const Arrow = styled.img`
-    width: 12px;
-    height: 12px;
-    margin-left: 5px;
-    margin-top: 2px;
-`
-
 
 export const StakePageField = () => {
     return (
         <>
             <Field>
-                <div style={{width: "200px", display: "flex", alignItems: "center"}}>
-                    <TokenLogo src={AtomLogo} />
-                    <TokenName>ATOM</TokenName>
-                    <Arrow src={ArrowWhite} />
-                </div>
+                <StakePageModal/>
                 <StakePageInput/>
             </Field>
             <InpField>
