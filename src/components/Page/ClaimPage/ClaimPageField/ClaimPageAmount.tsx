@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
 const Container = styled.div`
     width: 200px;
@@ -8,24 +9,27 @@ const Container = styled.div`
     margin-right: 20px;
 `
 
-const QsAmount = styled.a`
+const QsAmount = styled.a <{ TextColor: string }>`
     font-size: 17px;
-    color: #fff;
+    color: ${props => props.TextColor};
     font-weight: 500;
 `
 
-const TokenAmount = styled.a`
+const TokenAmount = styled.a <{ TextColor: string }>`
     font-size: 12px;
-    color: #fff;
+    color: ${props => props.TextColor};
     font-weight: 500;
 `
 
 
 export const ClainPageAmount = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return(
         <Container>
-            <QsAmount>10 qsATOM</QsAmount>
-            <TokenAmount>9.1 ATOM</TokenAmount>
+            <QsAmount TextColor={theme.TextColor}>10 qsATOM</QsAmount>
+            <TokenAmount TextColor={theme.TextColor}>9.1 ATOM</TokenAmount>
         </Container>
     )
 }

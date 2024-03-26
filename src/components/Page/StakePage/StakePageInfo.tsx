@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useToggleTheme } from "../../../hooks/useToggleTheme";
 
 const Container = styled.div`
     width: 100%;
@@ -9,7 +10,16 @@ const Container = styled.div`
 
 const InfoText = styled.h3`
     font-size: 18px;
-    color: #C0C0C0;
+    color: #aaa;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    line-height: 2em;
+`
+
+const ImportantField = styled.h3 <{ TextColor: string }>`
+    font-size: 18px;
+    color: ${props => props.TextColor};
     font-weight: 500;
     margin: 0;
     white-space: nowrap;
@@ -18,10 +28,13 @@ const InfoText = styled.h3`
 
 
 export const StakePageInfo = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return(
         <Container>
             <div>
-                <InfoText style={{color: "#fff"}}>Annual percentage rate</InfoText>
+                <ImportantField TextColor={theme.TextColor}>Annual percentage rate</ImportantField>
                 <InfoText>You will receive</InfoText>
                 <InfoText>Exchange rate</InfoText>
                 <InfoText>Max transaction fee</InfoText>

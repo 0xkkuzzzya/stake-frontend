@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { useToggleTheme } from "../../hooks/useToggleTheme";
 
 const Header = styled.div`
     width: 100%;
     text-align: center;
 `
 
-const PageText = styled.a`
+const PageText = styled.a <{TextColor: string}>`
     font-size: 32px;
-    color: white;
-    font-weight: 500;
+    color: ${props => props.TextColor};
+    font-weight: 600;
 `
 
 const PageDescription = styled.h3`
@@ -21,9 +22,12 @@ const PageDescription = styled.h3`
 
 
 export const ClaimPageHeader = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return(
         <Header>
-            <PageText>Claim ATOM</PageText>
+            <PageText TextColor={theme.TextColor}>Claim ATOM</PageText>
             <PageDescription>
                 Claiming previously unbonding tokens
             </PageDescription>

@@ -9,7 +9,7 @@ const Container = styled.div`
 `
 
 const InfoText = styled.a`
-    color: #C0C0C0;
+    color: #aaa;
     font-size: 17px;
     font-weight: 500;
 `

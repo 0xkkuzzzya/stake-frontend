@@ -4,13 +4,14 @@ import { MainHeader } from "./Header/MainHeader/MainHeader";
 import { StakePage } from "./Page/StakePage/StakePage";
 import { ClaimPage } from "./Page/ClaimPage/ClaimPage";
 import { WithdrawalPage } from "./Page/WithdrawalPage/WithdrawalPage";
+import { useToggleTheme } from "../hooks/useToggleTheme";
 
-const Container = styled.div`
+const Container = styled.div <{ backgroundColor: string}>`
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #161616;
+    background: ${props => props.backgroundColor};
 `
 
 const PageContainer = styled.div`
@@ -22,8 +23,11 @@ const PageContainer = styled.div`
 
 
 export const Index = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return (
-        <Container>
+        <Container backgroundColor={theme.backgroundColor}>
             <MainHeader />
             <PageContainer>
                 <Routes>

@@ -20,6 +20,7 @@ interface Theme {
   walletHover: string;
   navBlockBg: string;
   ModalHoverColor: string;
+  claimBg: string;
 }
 
 export const ThemeWhiteState: Theme = { 
@@ -42,6 +43,7 @@ export const ThemeWhiteState: Theme = {
     walletHover: '#ECECEC',
     navBlockBg: '#ECEBEB',
     ModalHoverColor: '#ECECEC',
+    claimBg: '#fff'
 };
 
 export const ThemeBlackState: Theme = { 
@@ -64,6 +66,7 @@ export const ThemeBlackState: Theme = {
   walletHover: '#333333',
   navBlockBg: '#202020',
   ModalHoverColor: '#333333',
+  claimBg: '#202020'
 };
 
 

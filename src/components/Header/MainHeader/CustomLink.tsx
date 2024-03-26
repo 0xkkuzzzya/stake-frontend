@@ -41,7 +41,7 @@ export const MainHeaderLink = ({children, to}: Props) => {
         <LinkBLock 
         to={to}
         style={{
-            color: match ? theme.active == true ? '#fff' : '#ddd' :  theme.active == true ? '#666' : '#888',
+            color: match ? theme.active == true ? '#fff' : '#555' :  theme.active == true ? '#666' : '#aaa',
             transition: '.2s ease-in-out',
             width: '100%'
         }}

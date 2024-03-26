@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { useToggleTheme } from "../../hooks/useToggleTheme";
 
 const Header = styled.div`
     width: 100%;
     text-align: center;
 `
 
-const PageText = styled.a`
+const PageText = styled.a <{TextColor: string}>`
     font-size: 32px;
-    color: white;
+    color: ${props => props.TextColor};
     font-weight: 500;
 `
 
@@ -21,9 +22,12 @@ const PageDescription = styled.h3`
 
 
 export const WithdrawalPageHeader = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return(
         <Header>
-            <PageText>Withdrawal ATOM</PageText>
+            <PageText TextColor={theme.TextColor}>Withdrawal ATOM</PageText>
             <PageDescription>
                 Request qsATOM withdrawal and claim ATOM
             </PageDescription>

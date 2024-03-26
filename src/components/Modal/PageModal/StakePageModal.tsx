@@ -3,6 +3,7 @@ import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
 import AtomLogo from '../../../assets/svg/CosmosLogo.webp'
 import ArrowWhite from '../../../assets/svg/ArrowWhite.svg'
+import ArrowBlack from '../../../assets/svg/ArrowBlack.svg'
 import loop from '../../../assets/svg/loop.svg'
 import { useToggleTheme } from "../../../hooks/useToggleTheme";
 import { useShowModalStake } from "../../../hooks/useShowModal";
@@ -122,18 +123,21 @@ const TokenLogo = styled.img`
     height: 40px;
 `
 
-const TokenName = styled.a`
+const TokenName = styled.a <{ TextColor: string }>`
     font-size: 22px;
-    color: white;
+    color: ${props => props.TextColor};
     font-weight: 500;
     margin-left: 10px;
 `
 
-const ArrowLogo = styled.img`
+const ArrowLogo = styled.svg <{ ArrrowColor: string }>`
     width: 12px;
     height: 12px;
     margin-left: 5px;
     margin-top: -2px;
+    background: url(${props => props.ArrrowColor});
+    background-repeat: no-repeat;
+    background-size: contain;
 `
 
 const ModalTextBlock = styled.div`
@@ -146,6 +150,26 @@ const ModalText = styled.h4 <{ TextColor: string }>`
     margin-left: 26px;
     font-size: 20px;
     color: ${props => props.TextColor};
+`
+
+const AmountText = styled.a <{ TextColor: string }>`
+    font-size: 20px;
+    font-weight: 500;
+    color: ${props => props.TextColor};
+`
+
+const Token = styled.div`
+    width: 150px;
+    display: flex;
+    align-items: center;
+`
+
+const TokenContrainer = styled.div`
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
 `
 
 
@@ -185,8 +209,8 @@ export const StakePageModal = () => {
             <OpenButton TextColor={theme.TextColor} onClick={open}>
                 <div style={{ width: "200px", display: "flex", alignItems: "center" }}>
                     <TokenLogo src={AtomLogo} />
-                    <TokenName>ATOM</TokenName>
-                    <ArrowLogo src={ArrowWhite} />
+                    <TokenName TextColor={theme.TextColor}>ATOM</TokenName>
+                    <ArrowLogo ArrrowColor={theme.active == true ? ArrowWhite : ArrowBlack} />
                 </div>
             </OpenButton>
             <StyledDialogOvelay isOpen={ShowModalStake.b} onDismiss={close}>
@@ -207,6 +231,13 @@ export const StakePageModal = () => {
                             <SearchToken placeholder='Search'></SearchToken>
                         </SearchDiv>
                     </SearchBorder>
+                    <TokenContrainer>
+                        <Token>
+                            <TokenLogo src={AtomLogo} />
+                            <TokenName style={{fontSize: "20px"}} TextColor={theme.TextColor}>ATOM</TokenName>
+                        </Token>
+                        <AmountText TextColor={theme.TextColor}>0</AmountText>
+                    </TokenContrainer>
                 </StyledDialogContent>
             </StyledDialogOvelay>
         </ModalBlock>

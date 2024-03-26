@@ -3,22 +3,22 @@ import AtomLogo from '../../../../assets/svg/AtomLogo.webp'
 import ArrowWhite from '../../.././../assets/svg/ArrowWhite.svg'
 import { WithdrawalPageInput } from "./WithdrawalPageInput";
 import { WithdrawalPageModal } from "../../../Modal/PageModal/WithdrawalPageModal";
+import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
-const Field = styled.div`
+const Field = styled.div <{BorderField: string}>`
     width: 100%;
     height: 80px;
-    border: 2px solid #3A3A3A;
+    border: ${props => props.BorderField};
     border-radius: 20px;
     display: flex;
     align-items: center;
     margin-top: 40px;
-    background: #202020;
 `
 
-const InpField = styled.div`
+const InpField = styled.div <{BorderField: string}>`
     width: 100%;
     height: 50px;
-    border: 2px solid #3A3A3A;
+    border: ${props => props.BorderField};
     border-top: none;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -32,7 +32,7 @@ const AvaibleBlock = styled.div`
     width: 100px;
     font-size: 12px;
     white-space: nowrap;
-    color: #CBCBCB;
+    color: #aaa;
     font-weight: 500;
     margin-bottom: 8px;
     margin-left: 15px;
@@ -55,13 +55,16 @@ const MaxAmount = styled.div`
 
 
 export const WithdrawalPageField = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return (
         <>
-            <Field>
+            <Field BorderField={theme.BorderField}>
                 <WithdrawalPageModal/>
                 <WithdrawalPageInput/>
             </Field>
-            <InpField>
+            <InpField BorderField={theme.BorderField}>
                 <AvaibleBlock>Available: 0 ATOM</AvaibleBlock>
                 <MaxAmount>MAX</MaxAmount>
             </InpField>

@@ -2,17 +2,18 @@ import styled from "styled-components";
 import qsAtomlogo from '../../../../assets/svg/qsATOM.svg'
 import qsTIAlofo from '../../../../assets/svg/qsTIA.svg'
 import { ClainPageAmount } from "./ClaimPageAmount";
+import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
-const Container = styled.div`
+const Container = styled.div <{BorderField: string, claimBg: string}>`
     width: 100%;
     height: 200px;
-    background: #202020;
+    background: ${props => props.claimBg};
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
     margin-top: 30px;
-    border: 2px solid #3A3A3A;
+    border: ${props => props.BorderField};
     border-radius: 20px;
 `
 
@@ -31,9 +32,9 @@ const TokenLogo = styled.img`
     height: 40px;
 `
 
-const TokenName = styled.a`
+const TokenName = styled.a <{ TextColor: string }>`
     font-size: 22px;
-    color: white;
+    color: ${props => props.TextColor};
     font-weight: 500;
     margin-left: 10px;
 `
@@ -47,19 +48,22 @@ const TokenContainer = styled.div`
 
 
 export const ClaimPageField = () => {
+
+    const [theme, setTheme] = useToggleTheme()
+
     return (
-        <Container>
+        <Container BorderField={theme.BorderField} claimBg={theme.claimBg}>
             <Field style={{ border: "2px solid #44A884", marginTop: "0px" }}>
                 <TokenContainer>
                     <TokenLogo src={qsAtomlogo} />
-                    <TokenName>qsATOM</TokenName>
+                    <TokenName TextColor={theme.TextColor}>qsATOM</TokenName>
                 </TokenContainer>
                 <ClainPageAmount />
             </Field>
             <Field style={{ border: "2px solid #EC8600" }}>
                 <TokenContainer>
                     <TokenLogo src={qsTIAlofo} />
-                    <TokenName>qsTIA</TokenName>
+                    <TokenName TextColor={theme.TextColor}>qsTIA</TokenName>
                 </TokenContainer>
                 <ClainPageAmount />
             </Field>
