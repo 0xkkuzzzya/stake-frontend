@@ -12,9 +12,11 @@ const ButtonBlock = styled.div`
     color: #fff;
     margin-left: auto;
     margin-right: 60px;
+    @media (max-width: 1050px) {
+        margin-left: 0;
+    }
     @media (max-width: 500px) {
         margin-right: 20px;
-        margin-left: 0;
     }
     @media (min-width: 950px) {
         margin-right: 60px;
