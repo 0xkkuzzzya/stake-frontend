@@ -13,16 +13,23 @@ const QsAmount = styled.a <{ TextColor: string }>`
     font-size: 17px;
     color: ${props => props.TextColor};
     font-weight: 500;
+    @media (max-width: 500px) {
+        font-size: 14px;   
+    }
 `
 
 const TokenAmount = styled.a <{ TextColor: string }>`
     font-size: 12px;
     color: ${props => props.TextColor};
     font-weight: 500;
+    @media (max-width: 500px) {
+        font-size: 14px;   
+    }
 `
 
 
-export const ClainPageAmount = () => {
+
+export const ClaimPageAmount = () => {
 
     const [theme, setTheme] = useToggleTheme()
 

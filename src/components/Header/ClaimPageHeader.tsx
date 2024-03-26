@@ -10,6 +10,9 @@ const PageText = styled.a <{TextColor: string}>`
     font-size: 32px;
     color: ${props => props.TextColor};
     font-weight: 600;
+    @media (max-width: 500px) {
+        font-size: 22px;
+    }
 `
 
 const PageDescription = styled.h3`
@@ -18,6 +21,9 @@ const PageDescription = styled.h3`
     font-weight: 500;
     margin: 0;
     white-space: nowrap;
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
 `
 
 

@@ -121,6 +121,10 @@ const SearchToken = styled.input`
 const TokenLogo = styled.img`
     width: 40px;
     height: 40px;
+    @media (max-width: 500px) {
+        width: 35px;
+        height: 35px;   
+    }
 `
 
 const TokenName = styled.a <{ TextColor: string }>`
@@ -128,6 +132,10 @@ const TokenName = styled.a <{ TextColor: string }>`
     color: ${props => props.TextColor};
     font-weight: 500;
     margin-left: 10px;
+    @media (max-width: 500px) {
+        font-size: 18px;
+        margin-top: 2px;   
+    }
 `
 
 const ArrowLogo = styled.svg <{ ArrrowColor: string }>`
@@ -138,6 +146,11 @@ const ArrowLogo = styled.svg <{ ArrrowColor: string }>`
     background: url(${props => props.ArrrowColor});
     background-repeat: no-repeat;
     background-size: contain;
+    @media (max-width: 500px) {
+        width: 10px;
+        height: 10px;
+        margin-top: 2px;
+    }
 `
 
 const ModalTextBlock = styled.div`

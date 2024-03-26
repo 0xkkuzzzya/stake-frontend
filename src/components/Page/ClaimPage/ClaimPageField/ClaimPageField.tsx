@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import qsAtomlogo from '../../../../assets/svg/qsATOM.svg'
 import qsTIAlofo from '../../../../assets/svg/qsTIA.svg'
-import { ClainPageAmount } from "./ClaimPageAmount";
+import { ClaimPageAmount } from "./ClaimPageAmount";
 import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
 const Container = styled.div <{BorderField: string, claimBg: string}>`
@@ -15,6 +15,9 @@ const Container = styled.div <{BorderField: string, claimBg: string}>`
     margin-top: 30px;
     border: ${props => props.BorderField};
     border-radius: 20px;
+    @media (max-width: 500px) {
+        margin-top: 20px;
+    }
 `
 
 const Field = styled.div`
@@ -25,11 +28,18 @@ const Field = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 500px) {
+        height: 55px;
+    }
 `
 
 const TokenLogo = styled.img`
     width: 40px;
     height: 40px;
+    @media (max-width: 500px) {
+        width: 35px;
+        height: 35px;   
+    }
 `
 
 const TokenName = styled.a <{ TextColor: string }>`
@@ -37,6 +47,9 @@ const TokenName = styled.a <{ TextColor: string }>`
     color: ${props => props.TextColor};
     font-weight: 500;
     margin-left: 10px;
+    @media (max-width: 500px) {
+        font-size: 18px;   
+    }
 `
 
 const TokenContainer = styled.div`
@@ -58,14 +71,14 @@ export const ClaimPageField = () => {
                     <TokenLogo src={qsAtomlogo} />
                     <TokenName TextColor={theme.TextColor}>qsATOM</TokenName>
                 </TokenContainer>
-                <ClainPageAmount />
+                <ClaimPageAmount />
             </Field>
             <Field style={{ border: "2px solid #EC8600" }}>
                 <TokenContainer>
                     <TokenLogo src={qsTIAlofo} />
                     <TokenName TextColor={theme.TextColor}>qsTIA</TokenName>
                 </TokenContainer>
-                <ClainPageAmount />
+                <ClaimPageAmount />
             </Field>
         </Container>
     )

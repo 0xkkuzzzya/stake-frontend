@@ -18,6 +18,9 @@ const Logo = styled.img`
     width: 50px;
     height: 50px;
     margin-left: 60px;
+    @media (max-width: 500px) {
+        margin-left: 20px;
+    }
 `
 
 

@@ -6,6 +6,9 @@ const Container = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    @media (max-width: 500px) {
+        margin-top: 15px;
+    }
 `
 
 const InfoText = styled.h3`
@@ -15,6 +18,9 @@ const InfoText = styled.h3`
     margin: 0;
     white-space: nowrap;
     line-height: 2em;
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
 `
 
 const ImportantField = styled.h3 <{ TextColor: string }>`
@@ -24,6 +30,9 @@ const ImportantField = styled.h3 <{ TextColor: string }>`
     margin: 0;
     white-space: nowrap;
     line-height: 2em;
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
 `
 
 

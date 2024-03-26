@@ -9,6 +9,9 @@ const Input = styled.input <{ TextColor: string }>`
     border: none;
     text-align: right;
     padding-right: 15px;
+    @media (max-width: 500px) {
+        font-size: 20px;   
+    }
 `
 
 

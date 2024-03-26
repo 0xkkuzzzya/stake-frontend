@@ -6,12 +6,18 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    @media (max-width: 500px) {
+        margin-top: 15px;
+    }
 `
 
 const InfoText = styled.a`
     color: #aaa;
     font-size: 17px;
     font-weight: 500;
+    @media (max-width: 500px) {
+        font-size: 15px;
+    }
 `
 
 

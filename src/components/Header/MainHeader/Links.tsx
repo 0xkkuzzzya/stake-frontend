@@ -120,7 +120,7 @@ export const MobileLink = () => {
                         </MainHeaderLink>
                     </MobLinkBlock>
                     <MobLinkBlock>
-                        <MainHeaderLink to="/withdrawals">
+                        <MainHeaderLink to="/withdrawal">
                             <WalletLogo icon={theme.active == true ? earnBlackLogo : earnLogo}></WalletLogo>
                             Withdrawals
                         </MainHeaderLink>

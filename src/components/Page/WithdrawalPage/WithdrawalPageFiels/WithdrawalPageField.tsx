@@ -13,6 +13,10 @@ const Field = styled.div <{BorderField: string}>`
     display: flex;
     align-items: center;
     margin-top: 40px;
+    @media (max-width: 500px) {
+        margin-top: 20px;
+        height: 60px;
+    }
 `
 
 const InpField = styled.div <{BorderField: string}>`
