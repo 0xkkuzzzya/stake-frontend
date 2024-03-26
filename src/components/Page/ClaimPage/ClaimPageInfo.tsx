@@ -7,7 +7,7 @@ const Container = styled.div`
     align-items: center;
     margin-top: 20px;
     @media (max-width: 500px) {
-        margin-top: 13px;
+        font-size: 13px;
     }
 `
 
@@ -16,7 +16,7 @@ const InfoText = styled.a`
     font-size: 17px;
     font-weight: 500;
     @media (max-width: 500px) {
-        margin-top: 13px;
+        font-size: 13px;
     }
 `
 
