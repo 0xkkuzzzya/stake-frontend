@@ -31,7 +31,7 @@ const ImportantField = styled.h3 <{ TextColor: string }>`
     white-space: nowrap;
     line-height: 2em;
     @media (max-width: 500px) {
-        font-size: 15px;
+        font-size: 13px;
     }
 `
 
