@@ -7,7 +7,7 @@ const Container = styled.div`
     justify-content: space-between;
     margin-top: 30px;
     @media (max-width: 500px) {
-        margin-top: 15px;
+        margin-top: 13px;
     }
 `
 
@@ -19,7 +19,7 @@ const InfoText = styled.h3`
     white-space: nowrap;
     line-height: 2em;
     @media (max-width: 500px) {
-        font-size: 15px;
+        font-size: 13px;
     }
 `
 
