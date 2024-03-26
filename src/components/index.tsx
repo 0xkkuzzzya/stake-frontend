@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const PageContainer = styled.div`
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 `
@@ -27,8 +27,8 @@ export const Index = () => {
             <MainHeader />
             <PageContainer>
                 <Routes>
-                    <Route path="/deposit/" element={<ClaimPage />} />
-                    <Route path="/withdrawal/" element={<WithdrawalPage />} />
+                    <Route path="/claim" element={<ClaimPage />} />
+                    <Route path="/withdrawal" element={<WithdrawalPage />} />
                     <Route path="/" element={<StakePage />} />
                     <Route path="/stake" element={<StakePage />} />
                 </Routes>
