@@ -2,7 +2,7 @@ import styled from "styled-components";
 import AtomLogo from '../../../../assets/svg/AtomLogo.webp'
 import ArrowWhite from '../../.././../assets/svg/ArrowWhite.svg'
 import { StakePageInput } from "./StakePageInput";
-import { StakePageModal } from "../../../Modal/StakePageModal";
+import { StakePageModal } from "../../../Modal/PageModal/StakePageModal";
 
 const Field = styled.div`
     width: 100%;

@@ -1,12 +1,12 @@
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import styled from 'styled-components';
-import KeplrLogo from '../../assets/svg/Keplr.webp'
+import KeplrLogo from '../../../assets/svg/Keplr.webp'
 import { animated } from '@react-spring/web';
-import { ConnectWallets } from '../Wallets/ConnectWallets/ConnectWallets';
-import { useConnectKeplrWalletStore } from '../../hooks/useConnectKeplrWalletStore';
-import { useWallet } from '../../hooks/useWallet';
-import { useShowWalletModal } from '../../hooks/useShowModal';
-import { useToggleTheme } from '../../hooks/useToggleTheme';
+import { ConnectWallets } from '../../Wallets/ConnectWallets/ConnectWallets';
+import { useConnectKeplrWalletStore } from '../../../hooks/useConnectKeplrWalletStore';
+import { useWallet } from '../../../hooks/useWallet';
+import { useShowWalletModal } from '../../../hooks/useShowModal';
+import { useToggleTheme } from '../../../hooks/useToggleTheme';
 import { useMediaQuery } from 'react-responsive';
 
 const ModalDialogOverlay = animated(DialogOverlay);

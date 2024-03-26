@@ -1,14 +1,11 @@
 import styled from "styled-components";
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 import { animated } from '@react-spring/web';
-import AtomLogo from '../../assets/svg/CosmosLogo.webp'
-import ArrowWhite from '../../assets/svg/ArrowWhite.svg'
-import loop from '../../assets/svg/loop.svg'
-import { useToggleTheme } from "../../hooks/useToggleTheme";
-import { useShowModalFrom, useShowModalStake } from "../../hooks/useShowModal";
-import { useAssetStore } from "../../hooks/useAssetStore";
-import { useLoanStore } from "../../hooks/usePositionStore";
-import { useAmountBorrowInfoStore } from "../../hooks/useAmountInStore";
+import AtomLogo from '../../../assets/svg/CosmosLogo.webp'
+import ArrowWhite from '../../../assets/svg/ArrowWhite.svg'
+import loop from '../../../assets/svg/loop.svg'
+import { useToggleTheme } from "../../../hooks/useToggleTheme";
+import { useShowModalStake } from "../../../hooks/useShowModal";
 
 
 const ModalDialogOverlay = animated(DialogOverlay);

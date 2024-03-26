@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { StakePageHeader } from "../../Header/StakePageHeader";
 import { StakePageField } from "./StakePageFiels/StakePageField";
-import { StakePageConfirm } from "../../Buttons/StakePageConfirm/StakePageConfirm";
+import { StakePageConfirm } from "../../Buttons/PageButtons/StakePageConfirm";
 import { StakePageInfo } from "./StakePageInfo";
 
 
