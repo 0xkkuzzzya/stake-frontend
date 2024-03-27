@@ -43,7 +43,7 @@ export const WithdrawalPageInfo = () => {
     return(
         <Container>
             <div>
-                <ImportantField TextColor={theme.TextColor}>Annual percentage rate</ImportantField>
+                <ImportantField TextColor={theme.TextColor}>Unbonding</ImportantField>
                 <InfoText>You will receive</InfoText>
                 <InfoText>Exchange rate</InfoText>
                 <InfoText>Max transaction fee</InfoText>
