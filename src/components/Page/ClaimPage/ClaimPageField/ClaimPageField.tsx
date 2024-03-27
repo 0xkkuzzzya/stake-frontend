@@ -6,7 +6,7 @@ import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
 const Container = styled.div <{BorderField: string, claimBg: string}>`
     width: 100%;
-    height: 200px;
+    height: 100%;
     background: ${props => props.claimBg};
     display: flex;
     flex-direction: column;
@@ -70,6 +70,27 @@ export const ClaimPageField = () => {
                 <TokenContainer>
                     <TokenLogo src={qsAtomlogo} />
                     <TokenName TextColor={theme.TextColor}>qsATOM</TokenName>
+                </TokenContainer>
+                <ClaimPageAmount />
+            </Field>
+            <Field style={{ border: "2px solid #EC8600" }}>
+                <TokenContainer>
+                    <TokenLogo src={qsTIAlofo} />
+                    <TokenName TextColor={theme.TextColor}>qsTIA</TokenName>
+                </TokenContainer>
+                <ClaimPageAmount />
+            </Field>
+            <Field style={{ border: "2px solid #EC8600" }}>
+                <TokenContainer>
+                    <TokenLogo src={qsTIAlofo} />
+                    <TokenName TextColor={theme.TextColor}>qsTIA</TokenName>
+                </TokenContainer>
+                <ClaimPageAmount />
+            </Field>
+            <Field style={{ border: "2px solid #EC8600" }}>
+                <TokenContainer>
+                    <TokenLogo src={qsTIAlofo} />
+                    <TokenName TextColor={theme.TextColor}>qsTIA</TokenName>
                 </TokenContainer>
                 <ClaimPageAmount />
             </Field>

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { ClaimPageHeader } from "../../Header/ClaimPageHeader";
-import { ClaimPageConfirm } from "../../Buttons/PageButtons/ClaimPageConfirm";
 import { ClaimPageField } from "./ClaimPageField/ClaimPageField";
 import { ClaimPageInfo } from "./ClaimPageInfo";
+import { ClaimPageConfirm } from "../../Buttons/PageButtons/ClaimPageConfirm";
 
 const Container = styled.div`
     width: 450px;
@@ -20,7 +20,9 @@ export const ClaimPage = () => {
         <Container>
             <ClaimPageHeader/>
             <ClaimPageField/>
-            <ClaimPageConfirm/>
+            <div style={{display: "flex"}}>
+                <ClaimPageConfirm/>
+            </div>
             <ClaimPageInfo/>
         </Container>
     )
