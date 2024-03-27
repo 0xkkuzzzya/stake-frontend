@@ -89,10 +89,11 @@ const WalletLogo = styled.svg <{ icon: string }>`
 
 
 export const DesLink = () => {
+
     return (
         <BlockLink>
             <LinkBlock>
-                <MainHeaderLink to="/stake">Stake</MainHeaderLink>
+                <MainHeaderLink to="/">Stake</MainHeaderLink>
             </LinkBlock>
             <LinkBlock>
                 <MainHeaderLink to="/withdrawal">Withdrawals</MainHeaderLink>
