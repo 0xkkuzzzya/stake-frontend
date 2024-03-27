@@ -54,6 +54,7 @@ export async function GetPriceByDenom(denom: string): Promise<number> {
 } 
 
 export const StakeModalInfo = () => {
+    
     const [ position, setPosition ] = usePositionStore();
     const [ assets, setAssets ] = useAssetStore();
     const [ params, setParams ] = useParamsStore();

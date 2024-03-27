@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { StakePageHeader } from "../../Header/StakePageHeader";
 import { StakePageField } from "./StakePageFiels/StakePageField";
-import { StakePageConfirm } from "../../Buttons/PageButtons/StakePageConfirm";
 import { StakePageInfo } from "./StakePageInfo";
+import { StakeModalTransaction } from "../../Modal/PageModal/ModalTranzaction/StakeModalTranzaction/StakeModalTranzaction";
 
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ export const StakePage = () => {
         <Container>
             <StakePageHeader/>
             <StakePageField/>
-            <StakePageConfirm/>
+            <StakeModalTransaction/>
             <StakePageInfo/>
         </Container>
     )

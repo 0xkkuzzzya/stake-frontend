@@ -52,7 +52,7 @@ const OpenButton = styled.button`
     margin: 0 auto;
     border-radius: 12px;
     cursor: pointer;
-    color: black;
+    color: #fff;
     margin-top: 20px;
     transition: all .15s ease-in-out;
     &:active {
@@ -111,7 +111,7 @@ const StyledDialogContent = styled(ModalDialogContent) <{ modalBgColor: string, 
 `
 
 
-export const WithdrawalModalTransaction = () => {
+export const StakeModalTransaction = () => {
 
     const open = () => { setShowModalTranzaction({ b: true }) };
     const close = () => { setShowModalTranzaction({ b: false }) };
@@ -122,7 +122,7 @@ export const WithdrawalModalTransaction = () => {
         <>
             <CloseDiv>
                 <HeaderBlock>
-                    <HeaderText TextColor={theme.TextColor}>Confirm Withdrawal</HeaderText>
+                    <HeaderText TextColor={theme.TextColor}>Confirm Stake</HeaderText>
                 </HeaderBlock>
                 <CloseButton TextColor={theme.TextColor}>
                     <a style={{ cursor: "pointer" }} onClick={close} aria-hidden>×</a>

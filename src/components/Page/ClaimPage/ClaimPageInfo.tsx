@@ -13,7 +13,7 @@ const Container = styled.div`
 
 const InfoText = styled.a`
     color: #aaa;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     @media (max-width: 500px) {
         font-size: 13px;

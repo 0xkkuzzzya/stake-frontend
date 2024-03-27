@@ -3,8 +3,8 @@ import { StakePageHeader } from "../../Header/StakePageHeader";
 import { WithdrawalPageField } from "./WithdrawalPageFiels/WithdrawalPageField";
 import { WithdrawalPageInfo } from "./WithdrawalPageInfo";
 import { WithdrawalPageHeader } from "../../Header/WithdrawalPageHeader";
-import { WithdrawalPageConfirm } from "../../Buttons/PageButtons/WithdrawalPageConfirm";
-import { WithdrawalModalTransaction } from "../../Modal/PageModal/ModalTranzaction.tsx/WithdrawalModalTranzaction/WithdrawalModalTranzaction";
+import { WithdrawalModalTransaction } from "../../Modal/PageModal/ModalTranzaction/WithdrawalModalTranzaction/WithdrawalModalTranzaction";
+
 
 const Container = styled.div`
     width: 450px;

@@ -5,14 +5,14 @@ const Container = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
     @media (max-width: 500px) {
         margin-top: 15px;
     }
 `
 
 const InfoText = styled.h3`
-    font-size: 18px;
+    font-size: 16px;
     color: #aaa;
     font-weight: 500;
     margin: 0;
@@ -24,7 +24,7 @@ const InfoText = styled.h3`
 `
 
 const ImportantField = styled.h3 <{ TextColor: string }>`
-    font-size: 18px;
+    font-size: 16px;
     color: ${props => props.TextColor};
     font-weight: 500;
     margin: 0;

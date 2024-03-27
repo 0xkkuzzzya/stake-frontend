@@ -7,7 +7,7 @@ import { useToggleTheme } from "../../../../hooks/useToggleTheme";
 
 const Field = styled.div <{BorderField: string}>`
     width: 100%;
-    height: 80px;
+    height: 65px;
     border: ${props => props.BorderField};
     border-radius: 20px;
     display: flex;

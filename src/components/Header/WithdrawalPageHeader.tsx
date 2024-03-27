@@ -7,7 +7,7 @@ const Header = styled.div`
 `
 
 const PageText = styled.a <{TextColor: string}>`
-    font-size: 32px;
+    font-size: 26px;
     color: ${props => props.TextColor};
     font-weight: 500;
     @media (max-width: 500px) {
@@ -16,7 +16,7 @@ const PageText = styled.a <{TextColor: string}>`
 `
 
 const PageDescription = styled.h3`
-    font-size: 18px;
+    font-size: 12px;
     color: #bbb;
     font-weight: 500;
     margin: 0;
